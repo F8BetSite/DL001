@@ -1,0 +1,355 @@
+/* reponsive css */
+@media screen and (max-width: 1440px) {
+  .gif {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 1279.98px) {
+  .header li {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .header-menu-item {
+    font-size: 1rem;
+  }
+
+  header .header-group-button button {
+    font-size: 1rem;
+    padding: 4px 10px;
+  }
+
+  .gif {
+    visibility: hidden;
+  }
+
+  .section-earn-bilions .box-left h2 {
+    font-size: 2rem;
+  }
+
+  .section-earn-bilions .box-left p,
+  .section-earn-bilions .box-right li {
+    font-size: 1.5rem;
+  }
+
+  .item-profit li:first-child {
+    text-align: center;
+  }
+
+  .item-profit li img {
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 1023.98px) {
+  header li:first-child {
+    margin-left: 0;
+  }
+
+  header li {
+    border-right: none;
+  }
+
+  .list-item-profit {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .header .nav-link {
+    padding: 0.5rem 0rem;
+  }
+
+  .info-register-left-title,
+  .info-register-right-title {
+    font-size: 2.5rem;
+  }
+
+  .social {
+    font-size: 1.5rem;
+  }
+
+  .header-menu-item {
+    font-size: 1.2rem;
+  }
+
+  .hidden-mobile {
+    display: none !important;
+  }
+
+  .hidden-pc {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .list-item-profit {
+    flex-wrap: wrap;
+    display: inline-flex;
+  }
+
+  .contact-tele {
+    width: 50px;
+    height: 50px;
+  }
+
+  .section-banner .slick-dots li button {
+    width: 30px;
+  }
+
+  .section-f8bet-real {
+    margin-top: 2rem;
+  }
+
+  .f8bet-real h1 {
+    font-size: 2rem;
+  }
+
+  .section-earn-bilions {
+    padding: 1rem 0;
+  }
+
+  .section-earn-bilions .box-left {
+    padding: 1rem;
+  }
+
+  .section-earn-bilions .box-right {
+    padding: 1rem 3rem;
+  }
+
+  .section-earn-bilions .box-right li {
+    line-height: 2rem;
+  }
+
+  .profit-title h2,
+  .title-highlights {
+    font-size: 2.5rem;
+  }
+
+  .profit-details .warning {
+    font-size: 1.5rem;
+  }
+
+  .section-policy {
+    margin-top: 1rem;
+  }
+
+  .section-f8bet-new .content h2 {
+    font-size: 1.5rem;
+  }
+
+  .profit-details li {
+    list-style-type: none;
+  }
+
+  .profit-details p {
+    text-align: justify;
+  }
+
+  .header li {
+    padding: 1rem 0;
+  }
+
+  header .header-group-button button {
+    font-size: 1.6rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .header-group-button-mobile {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .header-group-button-mobile a {
+    width: 50%;
+  }
+
+  .header-group-button-mobile .btn-header {
+    border-radius: 8px;
+    width: 100%;
+    font-size: 1.6rem;
+  }
+
+
+  .swiper.swiper-nav {
+    --swiper-navigation-size: 20px;
+    --swiper-theme-color: #2e459a;
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-nav .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-nav .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-nav {
+    margin: 0;
+    padding: 0 2rem 1rem 2rem;
+  }
+
+  .item-nav {
+    background-color: #ffffff;
+    padding: 1rem;
+    flex-direction: column;
+    height: 90px;
+    border-radius: 8px;
+    box-shadow: rgb(50 50 93 / 25%) 0px 6px 12px -2px, rgb(0 0 0 / 30%) 0px 3px 7px -3px;
+    padding: 1rem;
+    border: 2px solid #0052d4;
+  }
+
+  .icon-img {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .item-nav p {
+    white-space: nowrap;
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #0052d4;
+  }
+
+  .btn-header {
+    padding: 0.8rem 1rem;
+  }
+
+
+  .modal1,
+  .modal1 .modal-dialog,
+  .modal1 .modal-content,
+  .modal1 .modal-body {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    margin: 0;
+  }
+
+  .modal1 .modal-title {
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  .modal1 .modal-header {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(0deg, #0052d4, #0052d4);
+
+  }
+
+  .modal1 .modal-header span {
+    font-size: 3.5rem;
+  }
+
+  .modal1 .title {
+    color: #000;
+    padding: 0;
+  }
+
+  .box-top-title {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .f8bet-real1 {
+    text-align: center;
+  }
+
+  .f8bet-real1 span {
+    font-size: 1.7rem;
+  }
+
+  .box-content-f8bet-real {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2rem;
+    text-align: justify;
+  }
+
+  .profit-details {
+    margin-top: 0;
+  }
+
+  .box-bonus-target {
+    padding: 0;
+  }
+
+  .profit-title-mobile {
+    font-size: 2rem !important;
+  }
+
+
+  .box-world-cup .title-letter {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+
+  .box-world-cup .title-head {
+    font-size: 1.6rem;
+    margin-top: 0;
+  }
+
+  .table thead td,
+  .table thead th {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  .table tbody td {
+    font-size: 1.4rem;
+  }
+  .text-tele-sp{
+    width: 250px;
+    bottom: 175px;
+  }
+  .corner-icon {
+    bottom: 90px;
+    right: 5px;
+  }
+  .corner-icon img {
+    width: 70px;
+  }
+
+}
+
+@media screen and (max-width: 374.98px) {}
+
+@media screen and (max-width: 320px) {
+  #myHeader>div>nav>a {
+    width: 125px;
+  }
+
+  .profit-title h2 {
+    font-size: 2rem;
+  }
+}

@@ -1,335 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hợp tác đại lý F8BET - Login</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="shortcut icon" href="../images/favicon-75.png">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link rel="shortcut icon" href="../images/favicon-75.png" />
     <style>
-        body,
-        html {
-            height: 100%;
-        }
+      body,
+      html {
+        height: 100%;
+      }
 
-        .login-container.agent {
-            background-image: url(../images/bg.png);
-            height: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
+      .login-container.agent {
+        background-image: url(../images/bg.png);
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 
-        .nrc-form {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+      .nrc-form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
 
-        .login-container.agent .login-form-block {
-            background-color: rgba(255, 255, 255, .95);
-            box-shadow: 0 5px 20px rgb(0 0 0 / 30%);
-        }
+      .login-container.agent .login-form-block {
+        background-color: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 5px 20px rgb(0 0 0 / 30%);
+      }
 
+      .login-container .login-form-block {
+        background-color: rgba(40, 40, 40, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgb(0 0 0 / 60%);
+        box-sizing: border-box;
+        margin: 20px auto;
+        padding: 20px 10px;
+        width: 420px;
+      }
+
+      .login-container .nrc-form-item {
+        display: block;
+        margin: 0 auto 30px;
+        padding: 2px 0;
+        position: relative;
+        width: 350px;
+      }
+
+      .login-input-box {
+        display: block;
+        margin: 10px 0;
+        padding: 0;
+        position: relative;
+      }
+
+      .login-container .nrc-form-item .icon {
+        color: #fff;
+        font-size: 16px;
+        left: 15px;
+        line-height: 50px;
+        position: absolute;
+        text-align: center;
+        width: 20px;
+      }
+
+      .login-container.agent .nrc-form-input input,
+      .login-container.agent .nrc-form-input input:-webkit-autofill,
+      .login-container.staging .nrc-form-input input,
+      .login-container.staging .nrc-form-input input:-webkit-autofill {
+        background-color: #fff;
+        box-shadow: inset 0 0 0 1px #fff, 0 0 3px #ccc;
+        color: #5f5f5f !important;
+        transition: 0.3s;
+      }
+
+      .login-container .nrc-form-input input {
+        background-color: rgba(0, 0, 0, 0.5);
+        border: 0;
+        border-radius: 100px;
+        box-shadow: none;
+        box-shadow: inset 0 0 0 1px #000;
+        color: #fff !important;
+        font-size: 15px;
+        font-weight: 100;
+        height: 40px;
+        margin: 5px 0;
+        text-indent: 35px;
+        transition: 0.3s;
+        width: 100%;
+      }
+
+      .login-container .form-btn .nrc-button {
+        background-color: #0052d4;
+        border-radius: 100px;
+        height: 40px;
+        width: 350px;
+      }
+
+      .nrc-form-block .form-btn .nrc-button {
+        margin: 0 3px;
+      }
+
+      .nrc-button {
+        appearance: none;
+        background-color: #01b1f0;
+        border: 0;
+        border-radius: 3px;
+        box-shadow: inset 0 0 0 1px rgb(0 0 0 / 10%),
+          inset 0 1px 0 1px rgb(255 255 255 / 10%);
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-family: inherit;
+        font-family: lato-regular, Microsoft YaHei, Microsoft JhengHei,
+          PingFangTC, Helvetica;
+        font-size: 100%;
+        line-height: 1.7;
+        overflow: hidden;
+        padding: 0.3em 1em;
+        position: relative;
+        text-decoration: none;
+        transition: 0.2s;
+      }
+
+      #errormsg {
+        margin-top: 1rem;
+        color: red;
+        font-size: 1rem;
+      }
+
+      .bi-person-badge,
+      .bi-file-lock2 {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        font-size: 1.2rem;
+        color: #0052d4;
+      }
+
+      .bi-person-badge::before,
+      .bi-file-lock2::before {
+        display: flex;
+      }
+
+      .logo {
+        padding-top: 13rem;
+        text-align: center;
+      }
+
+      .ssma p {
+        font-size: 14px;
+        font-weight: 400;
+        margin: 0;
+      }
+
+      ion-icon {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+
+      @media screen and (max-width: 1440px) {
+        .logo {
+          padding-top: 9rem;
+        }
+      }
+
+      @media screen and (max-width: 1279.98px) {
+        .logo {
+          padding-top: 11rem;
+        }
+      }
+
+      @media screen and (max-width: 767.98px) {
         .login-container .login-form-block {
-            background-color: rgba(40, 40, 40, .9);
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgb(0 0 0 / 60%);
-            box-sizing: border-box;
-            margin: 20px auto;
-            padding: 20px 10px;
-            width: 420px;
-        }
-
-        .login-container .nrc-form-item {
-            display: block;
-            margin: 0 auto 30px;
-            padding: 2px 0;
-            position: relative;
-            width: 350px;
-        }
-
-        .login-input-box {
-            display: block;
-            margin: 10px 0;
-            padding: 0;
-            position: relative;
-        }
-
-        .login-container .nrc-form-item .icon {
-            color: #fff;
-            font-size: 16px;
-            left: 15px;
-            line-height: 50px;
-            position: absolute;
-            text-align: center;
-            width: 20px;
-        }
-
-        .login-container.agent .nrc-form-input input,
-        .login-container.agent .nrc-form-input input:-webkit-autofill,
-        .login-container.staging .nrc-form-input input,
-        .login-container.staging .nrc-form-input input:-webkit-autofill {
-            background-color: #fff;
-            box-shadow: inset 0 0 0 1px #fff, 0 0 3px #ccc;
-            color: #5f5f5f !important;
-            transition: .3s;
-        }
-
-        .login-container .nrc-form-input input {
-            background-color: rgba(0, 0, 0, .5);
-            border: 0;
-            border-radius: 100px;
-            box-shadow: none;
-            box-shadow: inset 0 0 0 1px #000;
-            color: #fff !important;
-            font-size: 15px;
-            font-weight: 100;
-            height: 40px;
-            margin: 5px 0;
-            text-indent: 35px;
-            transition: .3s;
-            width: 100%;
-        }
-
-        .login-container .form-btn .nrc-button {
-            background-color: #0052d4;
-            border-radius: 100px;
-            height: 40px;
-            width: 350px;
-        }
-
-        .nrc-form-block .form-btn .nrc-button {
-            margin: 0 3px;
-        }
-
-        .nrc-button {
-            appearance: none;
-            background-color: #01b1f0;
-            border: 0;
-            border-radius: 3px;
-            box-shadow: inset 0 0 0 1px rgb(0 0 0 / 10%), inset 0 1px 0 1px rgb(255 255 255 / 10%);
-            color: #fff;
-            cursor: pointer;
-            display: inline-block;
-            font-family: inherit;
-            font-family: lato-regular, Microsoft YaHei, Microsoft JhengHei, PingFangTC, Helvetica;
-            font-size: 100%;
-            line-height: 1.7;
-            overflow: hidden;
-            padding: 0.3em 1em;
-            position: relative;
-            text-decoration: none;
-            transition: .2s;
-        }
-
-        #errormsg {
-            margin-top: 1rem;
-            color: red;
-            font-size: 1rem;
-        }
-
-        .bi-person-badge,
-        .bi-file-lock2 {
-            position: absolute;
-            top: 50%;
-            left: 10px;
-            transform: translateY(-50%);
-            font-size: 1.2rem;
-            color: #0052d4;
-        }
-
-        .bi-person-badge::before,
-        .bi-file-lock2::before {
-            display: flex
+          width: 365px;
         }
 
         .logo {
-            padding-top: 13rem;
-            text-align: center;
+          padding-top: 6rem;
+        }
+      }
+
+      @media screen and (max-width: 320px) {
+        .login-container .login-form-block {
+          width: 280px;
         }
 
-        .ssma p {
-            font-size: 14px;
-            font-weight: 400;
-            margin: 0;
+        .login-container .nrc-form-item,
+        .login-container .form-btn .nrc-button {
+          width: 250px;
         }
 
-        ion-icon {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
+        .logo {
+          padding-top: 2rem;
+          width: 280px;
         }
 
-        @media screen and (max-width: 1440px) {
-            .logo {
-                padding-top: 9rem;
-            }
+        .logo img {
+          width: 100%;
         }
-
-        @media screen and (max-width: 1279.98px) {
-            .logo {
-                padding-top: 11rem;
-            }
-        }
-
-        @media screen and (max-width: 767.98px) {
-            .login-container .login-form-block {
-                width: 365px;
-            }
-
-            .logo {
-                padding-top: 6rem;
-            }
-        }
-
-        @media screen and (max-width: 320px) {
-            .login-container .login-form-block {
-                width: 280px;
-            }
-
-            .login-container .nrc-form-item,
-            .login-container .form-btn .nrc-button {
-                width: 250px;
-            }
-
-            .logo {
-                padding-top: 2rem;
-                width: 280px;
-            }
-
-            .logo img {
-                width: 100%;
-            }
-        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="login-container agent">
-        <div class="logo">
-            <img src="../images/logo1.png" alt="jun88, daily" />
-        </div>
-        <form class="nrc-form nrc-form-block nrc-form-demo" id="form-login">
-            <h5 class="stagingversion"></h5>
-            <div class="login-form-block">
-                <div class="nrc-form-item">
-                    <div class="login-input-box input-username"><i class="bi bi-person-badge"></i>
-                        <div class="nrc-form-input nrc-u-3-4 "><input type="text" placeholder="Tên Đăng Nhập Đại Lý" id="agentid" class="" value=""><small class="info-msg"></small></div>
-                    </div>
-                    <div class="login-input-box input-password"><i class="bi bi-file-lock2"></i>
-                        <div class="nrc-form-input nrc-u-3-4 "><input type="password" placeholder="Mật Khẩu" id="password" class="" value=""><small class="info-msg"></small>
-                            <ion-icon id="showPass" name="eye-outline"></ion-icon>
-                        </div>
-                    </div>
-                    <div class="ssma">
-                        <p>Nếu bạn là đại lý cấp <strong>SSMA</strong> vui lòng đăng nhập <a href="https://f8b66.com/daily/dang-nhap">tại đây</a></p>
-                    </div>
-                </div>
-                <div id="output-box"></div>
-                <div class="form-btn text-center"><button title="" class="nrc-button" type="button" id="submit">Đăng Nhập</button>
-                    <h5 id="errormsg"></h5>
-                </div>
+      <div class="logo">
+        <img src="../images/logo1.png" alt="jun88, daily" />
+      </div>
+      <form class="nrc-form nrc-form-block nrc-form-demo" id="form-login">
+        <h5 class="stagingversion"></h5>
+        <div class="login-form-block">
+          <div class="nrc-form-item">
+            <div class="login-input-box input-username">
+              <i class="bi bi-person-badge"></i>
+              <div class="nrc-form-input nrc-u-3-4">
+                <input
+                  type="text"
+                  placeholder="Tên Đăng Nhập Đại Lý"
+                  id="agentid"
+                  class=""
+                  value=""
+                /><small class="info-msg"></small>
+              </div>
             </div>
-        </form>
+            <div class="login-input-box input-password">
+              <i class="bi bi-file-lock2"></i>
+              <div class="nrc-form-input nrc-u-3-4">
+                <input
+                  type="password"
+                  placeholder="Mật Khẩu"
+                  id="password"
+                  class=""
+                  value=""
+                /><small class="info-msg"></small>
+                <ion-icon id="showPass" name="eye-outline"></ion-icon>
+              </div>
+            </div>
+            <div class="ssma">
+              <p>
+                Nếu bạn là đại lý cấp <strong>SSMA</strong> vui lòng đăng nhập
+                <a href="https://f856.vip/daily/dang-nhap">tại đây</a>
+              </p>
+            </div>
+          </div>
+          <div id="output-box"></div>
+          <div class="form-btn text-center">
+            <button title="" class="nrc-button" type="button" id="submit">
+              Đăng Nhập
+            </button>
+            <h5 id="errormsg"></h5>
+          </div>
+        </div>
+      </form>
     </div>
 
-
-
-
-
-
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <script src="../js/hmac_sha1.js"></script>
 
     <script>
-        document.getElementById("showPass").addEventListener("click", () => {
-            let ishowPass = document.getElementById("showPass").getAttribute("name");
-            if (ishowPass === "eye-outline") {
-                document.getElementById("showPass").setAttribute("name", "eye-off-outline");
-                document.getElementById("password").setAttribute("type", "text");
-            }
-            if (ishowPass === "eye-off-outline") {
-                document.getElementById("showPass").setAttribute("name", "eye-outline");
-                document.getElementById("password").setAttribute("type", "password");
-            }
-        });
+      document.getElementById("showPass").addEventListener("click", () => {
+        let ishowPass = document
+          .getElementById("showPass")
+          .getAttribute("name");
+        if (ishowPass === "eye-outline") {
+          document
+            .getElementById("showPass")
+            .setAttribute("name", "eye-off-outline");
+          document.getElementById("password").setAttribute("type", "text");
+        }
+        if (ishowPass === "eye-off-outline") {
+          document
+            .getElementById("showPass")
+            .setAttribute("name", "eye-outline");
+          document.getElementById("password").setAttribute("type", "password");
+        }
+      });
 
+      const fptPromise = import("https://openfpcdn.io/fingerprintjs/v3").then(
+        (FingerprintJS) => FingerprintJS.load()
+      );
 
-        const fptPromise = import('https://openfpcdn.io/fingerprintjs/v3')
-            .then(FingerprintJS => FingerprintJS.load())
+      async function getFingerPrint() {
+        const fp = await fptPromise;
+        const result = await fp.get();
+        const visitorId = result.visitorId;
+        return visitorId;
+      }
 
-        async function getFingerPrint() {
-            const fp = await fptPromise;
-            const result = await fp.get();
-            const visitorId = result.visitorId;
-            return visitorId;
+      async function signIn() {
+        var password = document.getElementById("password").value;
+        var agentid = document.getElementById("agentid").value;
+        var passsha = Crypto.sha1_hmac(password, agentid);
+        const regfingerprint = await getFingerPrint();
+
+        var dataForm = {
+          account: agentid,
+          password: passsha,
+          loginFp: regfingerprint,
+        };
+
+        if (password === "" || agentid === "") {
+          document.getElementById("errormsg").innerHTML =
+            "Lỗi! Vui lòng nhập đầy đủ thông tin.";
+          return false;
         }
 
-
-        async function signIn() {
-            var password = document.getElementById("password").value;
-            var agentid = document.getElementById("agentid").value;
-            var passsha = Crypto.sha1_hmac(password, agentid);
-            const regfingerprint = await getFingerPrint();
-
-            var dataForm = {
-                account: agentid,
-                password: passsha,
-                loginFp: regfingerprint
+        fetch("https://boapi.f8bet.cc/f8bet-ims/api/v1/ulagentSite/login", {
+          method: "POST",
+          body: JSON.stringify(dataForm),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+        })
+          .then((response) => response.json())
+          .then((result) => {
+            console.log(result);
+            if (result.code === 29) {
+              document.getElementById("errormsg").innerHTML =
+                "Vui lòng liên hệ chuyên viên đại lý để kích hoạt tài khoản.";
+            } else if (result.code === 30) {
+              document.getElementById("errormsg").innerHTML =
+                "Tên đăng nhập hoặc tài khoản không đúng.";
+            } else if (result.code === 53) {
+              document.getElementById("errormsg").innerHTML =
+                "Tài khoản đã bị khóa.";
+            } else if (result.code === 54) {
+              document.getElementById("errormsg").innerHTML =
+                "Tài khoản đã dừng hoạt động.";
+            } else {
+              location.replace(
+                `https://ag.f8bet0.com/?ulagentId=${result.agent.id}&token=${result.token}`
+              );
             }
+          })
+          .catch((error) => {
+            document.getElementById("errormsg").innerHTML =
+              "Có lỗi xảy ra khi đăng nhập, vui lòng thử lại.";
+          });
+      }
 
+      document.querySelector("#submit").addEventListener(
+        "click",
+        async function (event) {
+          signIn();
+        },
+        false
+      );
 
-            if (password === "" || agentid === "") {
-                document.getElementById("errormsg").innerHTML = "Lỗi! Vui lòng nhập đầy đủ thông tin.";
-                return false;
-            }
-
-            fetch('https://boapi.f8bet.cc/f8bet-ims/api/v1/ulagentSite/login', {
-                    method: 'POST',
-                    body: JSON.stringify(dataForm),
-                    headers: {
-                        "Content-type": "application/json; charset=UTF-8"
-                    }
-                })
-                .then(response => response.json())
-                .then(result => {
-                    console.log(result)
-                    if (result.code === 29) {
-                        document.getElementById("errormsg").innerHTML = "Vui lòng liên hệ chuyên viên đại lý để kích hoạt tài khoản.";
-                    } else if (result.code === 30) {
-                        document.getElementById("errormsg").innerHTML = "Tên đăng nhập hoặc tài khoản không đúng.";
-                    } else if (result.code === 53) {
-                        document.getElementById("errormsg").innerHTML = "Tài khoản đã bị khóa.";
-                    } else if (result.code === 54) {
-                        document.getElementById("errormsg").innerHTML = "Tài khoản đã dừng hoạt động.";
-                    } else {
-                        location.replace(`https://ag.f8bet0.com/?ulagentId=${result.agent.id}&token=${result.token}`);
-                    }
-                })
-                .catch(error => {
-                    document.getElementById("errormsg").innerHTML = "Có lỗi xảy ra khi đăng nhập, vui lòng thử lại.";
-                });
+      document.addEventListener("keypress", function (e) {
+        var keynum = e.keyCode || e.which;
+        if (keynum == 13) {
+          signIn();
         }
-
-        document.querySelector("#submit").addEventListener("click", async function(event) {
-            signIn();
-        }, false);
-
-        document.addEventListener('keypress', function(e) {
-            var keynum = e.keyCode || e.which;
-            if (keynum == 13) {
-                signIn();
-            }
-
-        });
+      });
     </script>
-
-</body>
+  </body>
+</html>

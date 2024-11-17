@@ -7,8 +7,8 @@
 
 @media screen and (max-width: 1279.98px) {
   .header li {
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
   }
 
   .header-menu-item {
@@ -80,9 +80,18 @@
   .hidden-pc {
     display: block !important;
   }
+
+  .dp-rsmobile {
+    display: none !important;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
+
+  .dp-rsmobile {
+    display: block !important;
+  }
+
   .list-item-profit {
     flex-wrap: wrap;
     display: inline-flex;
@@ -310,8 +319,8 @@
 
 
   .box-world-cup .title-letter {
-    font-size: 1.8rem;
-    line-height: 2.8rem;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
   }
 
   .box-world-cup .title-head {
@@ -323,19 +332,23 @@
   .table thead th {
     font-size: 1.2rem;
     line-height: 2rem;
+    vertical-align: middle;
   }
 
   .table tbody td {
     font-size: 1.4rem;
   }
-  .text-tele-sp{
+
+  .text-tele-sp {
     width: 250px;
     bottom: 175px;
   }
+
   .corner-icon {
     bottom: 90px;
     right: 5px;
   }
+
   .corner-icon img {
     width: 70px;
   }

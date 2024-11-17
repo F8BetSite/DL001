@@ -100,8 +100,17 @@ header {
   background: #ffffff;
 }
 
-.hidden-pc {
+.hidden-pc,
+.dp-rsmobile {
   display: none;
+}
+
+.heightline {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
+  margin-top: -5px;
 }
 
 .hidden-mobile {
@@ -142,9 +151,8 @@ header {
 .wrapper-content {}
 
 header li {
-  border-right: 1px solid #000;
-  padding-right: 2.5rem;
-  padding-left: 2.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 header li a:hover {
@@ -165,7 +173,7 @@ header .header-group-button button {
   font-weight: 600;
   border-radius: 8px;
   padding: 6px 10px;
-  width: 150px;
+  width: 125px;
   text-transform: uppercase;
   line-height: 2.2rem;
 }
@@ -196,7 +204,7 @@ header .header-group-button button {
 
 .btn-header {
   background: transparent;
-  color: #000;
+  color: #fff;
   border: 1px solid #ffffff;
 }
 
@@ -217,12 +225,14 @@ header .header-group-button button {
 
 .btn-header-signup,
 .btn-reg-now {
-  background: linear-gradient(0deg, #d000d3, #f353b3);
+  background: linear-gradient(0deg, #fff, #fff);
+  border: 1px solid #0052d4;
+  color: #0052d4;
 }
 
 .btn-header-signup:hover,
 .btn-reg-now:hover {
-  background: linear-gradient(0deg, #f353b3, #d000d3);
+  background: linear-gradient(0deg, #fff, #fff);
   cursor: pointer;
 }
 
@@ -334,7 +344,7 @@ header .header-group-button button {
 .title-highlights {
   font-size: 3rem;
   text-transform: uppercase;
-  color: rgb(0, 0, 0);
+  color: #4E5F70;
   font-weight: 500;
   padding: 2rem 0 2rem 0;
   text-align: center;
@@ -343,7 +353,7 @@ header .header-group-button button {
 
 .box-highlights {
   border-radius: 8px;
-  padding: 1em;
+  padding: 3rem 2rem;
   color: #000000;
 }
 
@@ -354,6 +364,16 @@ header .header-group-button button {
 .item-highlights-icon {
   text-align: center;
   font-size: 4rem;
+  max-width: 65px;
+  max-height: 65px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.item-highlights-title {
+  color: #35404b;
 }
 
 .item-highlights-content {
@@ -363,7 +383,19 @@ header .header-group-button button {
   font-size: 1.6rem;
 }
 
-.item-highlights .icon-call {}
+.btn-mxh {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-mxh .item-mxh {
+  max-width: 30px;
+}
+
+.btn-mxh .item-mxh:last-child {
+  max-width: 42px;
+}
 
 .info-register {
   padding: 1rem 0;
@@ -474,9 +506,6 @@ header .header-group-button button {
   top: calc(50%);
   transform: translateY(calc(-50%));
   transition: all 0.5s ease-in-out;
-  /* background: rgb(255, 255, 255); */
-  /* border: 1px solid #000; */
-  /* display: none; */
 }
 
 .gif span {
@@ -642,10 +671,6 @@ header .header-group-button button {
   margin-top: 85px;
 }
 
-.list-banner {
-  /* margin-top: 80px; */
-}
-
 .slick-slide img {
   width: 100%;
   border-radius: 8px;
@@ -667,7 +692,6 @@ header .header-group-button button {
 }
 
 .section-banner .slick-arrow:hover {
-  /* background: #0000002b; */
   color: #000000cf;
   transition: all 0.25s;
   outline: none;
@@ -738,13 +762,14 @@ header .header-group-button button {
 }
 
 .section-earn-bilions .box-left {
-  border-left: 5px solid #0a5ed7;
+  border: 1px solid #000;
   padding: 2rem;
   position: relative;
 }
 
 .section-earn-bilions .box-left h2 {
   font-size: 3rem;
+  color: #4E5F70;
 }
 
 .section-earn-bilions .box-left p {
@@ -753,9 +778,9 @@ header .header-group-button button {
 }
 
 .section-earn-bilions .box-right {
-  border-left: 5px solid #0a5ed7;
+  border: 1px solid #000;
   height: 100%;
-  padding: 2rem 4rem;
+  padding: 2rem 2rem;
 }
 
 .section-earn-bilions .box-right li {
@@ -909,7 +934,7 @@ header .header-group-button button {
 .table thead td,
 .table thead th {
   font-size: 1.7rem;
-  background-color: #0052d4;
+  background-color: #35404b;
   text-align: center;
   border: 1px solid #000;
   color: #fff;
@@ -920,15 +945,11 @@ header .header-group-button button {
   line-height: 2rem;
   background-color: #ffff;
   text-align: center;
-  color: #000;
+  color: #35404b;
   border: 1px solid #000;
   vertical-align: middle;
-  background-color: #ff980026;
+  background-color: #F5FAFF;
 }
-
-/* .table td {
-  padding: 1rem;
-} */
 
 .table-root p {
   /* font-size: 2rem; */
@@ -1025,22 +1046,46 @@ header .header-group-button button {
 .box-world-cup {
   background-color: #fff;
   border-radius: 12px;
-  padding: 2rem 1rem;
+  padding: 2rem 2rem;
   font-size: 1.6rem;
   font-weight: normal;
-  border: 1px solid #0052d4;
+  border: 1px solid #000;
 }
 
 .box-world-cup .title-letter {
   text-align: center;
   line-height: 3.8rem;
-  background: linear-gradient(180deg, #0c60d8 0%, #095dd7 54%, #3f9bea 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+  color: #35404b;
   font-size: 2.8rem;
+  display: flex;
+  text-align: center;
+  width: max-content;
+  margin: auto;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   font-weight: 700;
+}
+
+.box-world-cup .title-letter::before {
+  background-image: url(./../images/layout-left.png);
+  height: 33px;
+  width: 120px;
+  content: "";
+  margin-right: 30px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.box-world-cup .title-letter::after {
+  background-image: url(./../images/layout-right.png);
+  height: 33px;
+  width: 120px;
+  content: "";
+  margin-left: 30px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .box-world-cup p {
@@ -1048,11 +1093,7 @@ header .header-group-button button {
 }
 
 .box-world-cup p span {
-  background: linear-gradient(180deg, #0c60d8 0%, #095dd7 54%, #3f9bea 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+  color: #000;
   font-weight: 600;
 }
 
@@ -1076,6 +1117,7 @@ table {
 .table thead th {
   font-size: 1.6rem;
   font-weight: 600;
+  padding: 1rem;
 }
 
 .table tbody td {
@@ -1188,18 +1230,69 @@ table {
 }
 
 .container p {
-    text-align: justify;
+  text-align: justify;
 }
 
 @media screen and (max-width: 767.98px) {
-	#popup-baotri{
-		width: 90%;
-	}
+  .dp-rsmobile {
+    display: block;
+  }
 
-	#popup-baotri img {
-		width: 100%;
-	}
+  #popup-baotri {
+    width: 90%;
+  }
 
+  #popup-baotri img {
+    width: 100%;
+  }
+
+  .box-world-cup {
+    padding: 1rem 1rem;
+  }
+
+  .item-highlights-icon {
+    max-width: 40px;
+    max-height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .item-highlights-title h2 {
+    font-size: 13px;
+  }
+
+  .item-highlights-content {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    text-align: center;
+  }
+
+  .item-highlights {
+    margin-top: 1rem;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .section-world-cup {
+    margin-top: 2rem;
+  }
+
+  /* Title Symboi */
+
+  .box-world-cup .title-letter::before {
+    background-image: url(./../images/layout-left-mb.png);
+    height: 20px;
+    width: 60px;
+    content: "";
+    margin-right: 10px;
+  }
+
+  .box-world-cup .title-letter::after {
+    background-image: url(./../images/layout-right-mb.png);
+    height: 20px;
+    width: 60px;
+    content: "";
+    margin-left: 10px;
+  }
 }
 
 .text-tele-sp {
@@ -1210,6 +1303,7 @@ table {
   transition: width 0.5s;
   z-index: 9;
 }
+
 .bg-border-text {
   background: linear-gradient(0deg, #cae9ff, #60b9ff);
   padding: 20px;
@@ -1224,6 +1318,7 @@ table {
   font-weight: 700;
   line-height: 1.45;
 }
+
 .close-text-tele-sp {
   position: absolute;
   z-index: 9999;
@@ -1246,35 +1341,43 @@ table {
   height: auto;
   border-radius: 50%;
 }
+
 .rung-ring {
   animation: rung-lac 1.5s ease infinite;
 }
+
 @-webkit-keyframes rung-lac {
   0% {
-      -webkit-transform: rotate(0) scale(1) skew(1deg)
+    -webkit-transform: rotate(0) scale(1) skew(1deg)
   }
 
   10% {
-      -webkit-transform: rotate(-5deg) scale(1) skew(1deg)
+    -webkit-transform: rotate(-5deg) scale(1) skew(1deg)
   }
 
   20% {
-      -webkit-transform: rotate(5deg) scale(1) skew(1deg)
+    -webkit-transform: rotate(5deg) scale(1) skew(1deg)
   }
 
   30% {
-      -webkit-transform: rotate(-5deg) scale(1) skew(1deg)
+    -webkit-transform: rotate(-5deg) scale(1) skew(1deg)
   }
 
   40% {
-      -webkit-transform: rotate(5deg) scale(1) skew(1deg)
+    -webkit-transform: rotate(5deg) scale(1) skew(1deg)
   }
 
   50% {
-      -webkit-transform: rotate(0) scale(1) skew(1deg)
+    -webkit-transform: rotate(0) scale(1) skew(1deg)
   }
 
   100% {
-      -webkit-transform: rotate(0) scale(1) skew(1deg)
+    -webkit-transform: rotate(0) scale(1) skew(1deg)
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .item-highlights-title h2 {
+    font-size: 18px;
   }
 }
